@@ -7,7 +7,7 @@ public class Greeter {
 	ungreet();
     }
 
-    public void ungreet() {
+    private void ungreet() {
 	System.out.println("I'm out.");
     }
 }
