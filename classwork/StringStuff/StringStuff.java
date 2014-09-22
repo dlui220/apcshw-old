@@ -12,6 +12,15 @@ public class StringStuff {
 	System.out.println("s2==s3: "+(s2 == s3));
 	System.out.println("s2==s4: "+(s2 == s4));
 	System.out.println("s3==s4: "+(s3 == s4));
+	System.out.println();
+	System.out.println("s1 equals s2: "+(s1.equals(s2)));
+	System.out.println("s1 equals s3: "+(s1.equals(s3)));
+	System.out.println("s1 equals s4: "+(s1.equals(s4)));
+	System.out.println("s2 equals s3: "+(s2.equals(s3)));
+	System.out.println();
+	System.out.println("aaa".compareTo("AAA"));
+	System.out.println("aaD".compareTo("aaD"));
+	System.out.println("Aaa".compareTo("aaA"));
     }
 }
 
