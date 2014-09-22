@@ -29,11 +29,15 @@ public class Greeter {
        types. Java figures out which one to run by matching parameter types
     */
     public Greeter() {
-	greeting = "Hello world!"
+	greeting = "Hello";
     }
     
 
     // regular methods
+
+    public String greetPerson(String name) {
+	return greeting +" "+name;
+    }
 
     public void setGreeting(String s) {
 	greeting = s;

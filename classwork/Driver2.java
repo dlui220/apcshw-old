@@ -7,6 +7,7 @@ public class Driver2{
 	Greeter g2 = new Greeter("Howdy!");
 	System.out.println("After the contsructor is called");
 	System.out.println(g2.greet());
-
+	
+	System.out.println(g1.greetPerson("Mike"));
     }
 }

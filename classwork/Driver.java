@@ -4,7 +4,7 @@ public class Driver {
 	Greeter g2 = new Greeter();
 
 	System.out.println(g1.greet());
-	System.out.println(g2. greet ());
+	System.out.println(g2.greet());
 
 	// We can't do this because greeting is private
 	// g1.greeting = new String("Sup!");

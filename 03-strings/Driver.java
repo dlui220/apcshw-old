@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Driver {
     public static void main(String[] args){
-        String s="Mike Zamansky";
+        String s="mike zamansky";
         int index = s.indexOf(" ");
 	//	System.out.println(s);
 	//	System.out.println(index);
