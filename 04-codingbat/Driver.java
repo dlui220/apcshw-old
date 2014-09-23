@@ -8,11 +8,10 @@ public boolean mixStart(String str) {
 // makeOutWord problem
 
 public String makeOutWord(String out, String word) {
-  String newout = out;
-  String outer1 = newout.substring(0,2);
-  String outer2 = newout.substring(2,3);
-  String outer3 = newout.substring(3);
-  String complete = outer1 + word + outer2 + outer3;
+  String outer1 = out.substring(0,2);
+  String outer2 = out.substring(2,4);bg
+
+  String complete = outer1 + word + outer2;
   return complete;
 }
 
