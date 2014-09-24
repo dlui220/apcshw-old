@@ -1,6 +1,7 @@
 //  mixStart problem
 public boolean mixStart(String str) {
-  if (str.length() < 3) return false;
+  if (str.length() < 3)
+      {return false;}
   String xix = str.substring(1,3);
   return(xix.equals("ix"));
 }
