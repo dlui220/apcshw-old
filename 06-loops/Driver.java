@@ -1,15 +1,9 @@
-public String frontTimes(String str, int n) {
-  if (str.length()<=3){
-    String front = str;
-    while (n > 0) {
-    return front;
-    n=n-1;
-    }} else {
-    String front = str.substring(0,3);
-    while (n > 0) {
-    return front;
-    n=n-1;
+public class Driver {
+    public static void main(String[] args) {
+	Loops g1 = new Loops();
+	System.out.println(g1.frontTimes("Lollipop",5));
+	System.out.println(g1.stringBits("Heeololeo"));
+	System.out.println(g1.stringYak("helloyakmyyaknameisderyakrick"));
+	System.out.println(g1.stringMatch("aabbcc","xxbbccdd"));
     }
-    }
-    
-    }
+}
