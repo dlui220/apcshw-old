@@ -1,5 +1,5 @@
 public class Loops {
-    // 20 minutes
+    // 10 minutes
     public String frontTimes(String str, int n) {
 	String result = new String();
 	if (str.length()<=3){
@@ -17,7 +17,7 @@ public class Loops {
 	}
 	return result;
     }
-    // 15 minutes, I googled and found the charAt method on stack overflow.
+    // 10 minutes, I googled and found the charAt method on stack overflow.
     public String stringBits(String str) {
 	String result = new String();
 	int place = 0;
@@ -29,7 +29,7 @@ public class Loops {
      
     }
 
-    // 30 minutes, got stuck on the if statement
+    // 20 minutes, got stuck on the if statement
     public String stringYak(String str) {
 	int place = 0;
 	int len = str.length();
@@ -44,7 +44,7 @@ public class Loops {
 	return result;
     }
     /*
-      30 minutes, got stuck on the use of the 'min' method and having to look
+     20 minutes, got stuck on the use of the 'min' method and having to look
        at the different lengths of each string
     */
     public int stringMatch(String a, String b) {
