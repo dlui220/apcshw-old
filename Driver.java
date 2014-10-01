@@ -7,9 +7,11 @@ public class Driver {
 	//	System.out.println();
 	//	System.out.println(s.tri1(5));
 	//	System.out.println();
-	System.out.println(s.tritest(5));
-	System.out.println(s.tritest(7));
+
+	System.out.println(s.tritest(3));
 	System.out.println(s.tritest(9));
+	System.out.println(s.tritest(7));
+
 	//	System.out.println();
 	//	System.out.println(s.tri3(7));
 	//	System.out.println();

@@ -82,48 +82,32 @@ public class Shapes {
 	int counter = 0;
 	int i = 1;
 	while (counter * 2 - 1 != h){
-	    for (int var=0;var<h-i;var++){
-		result+=" ";
+	    for (int var=0;var<(h+1)/2-i;var++){
+		result+="n";
 	    }
 	    for (int var=h-i;var<h+i-1;var++){
 		result = result + "*";
 	    }
 	    result = result + "\n";
-	    counter = counter + 1;
+	    counter++;
 	    i++;
-	}    
-    return result;
-    }
-	
-
-
-    public String diamond(int h){
-	String result= new String();
-	for (int i=1;i<=h;i++){ // for each individual line
-	    for (int var=0;var<h-i;var++){ // for the spaces
-		result+="n";
-	    }
-	 
-	    for (int var=h-i;var<h+i-1;var++){
-		result = result + "*";
-	    }
-	    result = result + "\n";
 	}
-	for (int x=h-1;x>0;x--) {
-	    for (int var=0;var<h-x;var++){ // for the spaces
+	int x = h - counter + 2;
+	while (counter-1 > 0){ // counter = 4
+	    for (int var=counter-1;var<(h+1)/2;var++){ // for the spaces
 		result+="n";
 	    }
 	 
-	    for (int var=h-x;var<h+x-1;var++){
+	    for (int var=(2*counter-3);var>0;var--){
 		result = result + "*";
 	    }
 	    result = result + "\n";
+	    counter--;
 	}
     
 
-	return result; // each time add line, add to new variable
-                       // when variable  * 2 - 1 then stop 
-	
-    }	
+    return result; // each time add line, add to new variable
+    // when variable  * 2 - 1 then stop 
+    }
 }
 
