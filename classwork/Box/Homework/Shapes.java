@@ -17,7 +17,8 @@ public class Shapes {
 	}
 	return s;
     }
-    public String triangle1( int h ) {
+    // Worked with Lulu on this in class
+    public String tri1( int h ) {
 	int x = 1;
 	String end = "";
 	while ( x <= h ) {
@@ -32,7 +33,7 @@ public class Shapes {
 	return end;
     }
 
-    public String triangle2(int h) {
+    public String tri2(int h) {
 	String result = "\n";
 	int newh = h;
 	int x = h - 1;
