@@ -77,7 +77,7 @@ public class Shapes {
 	
     }
 
-    public String tritest(int h){
+    public String diamond(int h){
 	String result= new String();
 	int counter = 0;
 	int i = 1;
