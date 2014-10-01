@@ -17,7 +17,7 @@ public class Loops {
 	}
 	return result;
     }
-    // 15 minutes, I googled and found the charAt method on stack overflow
+    // 15 minutes, I googled and found the charAt method on stack overflow.
     public String stringBits(String str) {
 	String result = new String();
 	int place = 0;
