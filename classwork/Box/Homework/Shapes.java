@@ -1,20 +1,22 @@
-public class Box {
-    public String box( int r, int c ) {
-	int x = 0;
-	String f = new String();
-	while ( x < c ) {
-	    f = f + "*";
-	    x = x + 1;
-	}
-	int y = 0;
-	String g = new String();
-	while ( y < r ) {
-	    g = g + f + "\n";
-	    y = y + 1;
-	}
-	return g;
-    }
 
+
+public class Shapes {
+
+    public String box(int r, int c){
+	String s= "";
+	int row = 0;
+	int col;
+	while (row<r){
+	    col = c;
+	    while (col>0){
+		s = s + "*";
+		col=col-1;
+	    }
+	    s=s+"\n";
+	    row=row+1;
+	}
+	return s;
+    }
     public String triangle1( int h ) {
 	int x = 1;
 	String end = "";
@@ -48,7 +50,7 @@ public class Box {
 		}
 	    } else {
 		result = result + "\n" ;
-		}
+	    }
 	    result = result + "\n";
 	}
 	while (h>0){
@@ -61,5 +63,4 @@ public class Box {
 
 	
 
-    // if result mod h = 0 ----- add * else new line
 }
