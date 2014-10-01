@@ -28,4 +28,23 @@ public class MoreShapes{
 	}
 	return (result+line("*",c));
     }
+    public String stringSplosion(String str) {
+	String result = new String();
+	for (int i=0;i<str.length();i++){
+	    result = result + str.substring(0,i);
+	}
+	result = result + str;
+	return result;
+    }
+    public String stringX(String str) {
+	String result = "";
+	for (int i=0; i<str.length(); i++) {
+	    if (!(i > 0 && i < (str.length()-1) &&
+		  str.substring(i, i+1).equals("x"))) {
+		result = result + str.substring(i, i+1);
+	    }
+	}
+	return result;
+    }
+
 }
