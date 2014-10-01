@@ -83,7 +83,7 @@ public class Shapes {
 	int i = 1;
 	while (counter * 2 - 1 != h){
 	    for (int var=0;var<(h+1)/2-i;var++){
-		result+="n";
+		result+=" ";
 	    }
 	    for (int var=h-i;var<h+i-1;var++){
 		result = result + "*";
@@ -92,10 +92,10 @@ public class Shapes {
 	    counter++;
 	    i++;
 	}
-	int x = h - counter + 2;
+	
 	while (counter-1 > 0){ // counter = 4
 	    for (int var=counter-1;var<(h+1)/2;var++){ // for the spaces
-		result+="n";
+		result+=" ";
 	    }
 	 
 	    for (int var=(2*counter-3);var>0;var--){
