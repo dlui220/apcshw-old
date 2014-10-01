@@ -4,6 +4,6 @@ public class Driver {
 	System.out.println(g1.frontTimes("Lollipop",5));
 	System.out.println(g1.stringBits("Heeololeo"));
 	System.out.println(g1.stringYak("helloyakmyyaknameisderyakrick"));
-	System.out.println(g1.stringMatch("aabbcc","xxbbccdd"));
+	System.out.println(g1.stringMatch("aabbcfdd","xxbbccdd"));
     }
 }
