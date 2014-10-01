@@ -8,9 +8,9 @@ public class Driver {
 	//	System.out.println(s.tri1(5));
 	//	System.out.println();
 
-	System.out.println(s.diamond(3));
-	System.out.println(s.diamond(9));
-	System.out.println(s.diamond(7));
+	System.out.println(s.diamond(11));
+	System.out.println(s.diamond(13));
+	System.out.println(s.diamond(15));
 
 	//	System.out.println();
 	//	System.out.println(s.tri3(7));
