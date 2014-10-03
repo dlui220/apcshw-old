@@ -61,7 +61,69 @@ public class Shapes {
 	return result;
     }
 
-
+    public String tri3(int h){
+	String result= new String();
+	for (int i=1;i<=h;i++){
+	    for (int var=0;var<h-i;var++){
+		result+=" ";
+	    }
+	 
+	    for (int var=h-i;var<h+i-1;var++){
+		result = result + "*";
+	    }
+	    result = result + "\n";
+	}
+	return result;
 	
+    }
+
+    public String diamond(int h){
+	String result= new String();
+	int counter = 0;
+	int i = 1;
+	while (counter * 2 - 1 != h){
+	    for (int var=0;var<(h+1)/2-i;var++){
+		result+=" ";
+	    }
+	    for (int var=h-i+1;var<h+i;var++){
+		result = result + "*";
+	    }
+	    result = result + "\n";
+	    counter++;
+	    i++;
+	}
+	
+	while (counter-1 > 0){ // counter = 4
+	    for (int var=counter-1;var<(h+1)/2;var++){ // for the spaces
+		result+=" ";
+	    }
+	 
+	    for (int var=(2*counter-3);var>0;var--){
+		result = result + "*";
+	    }
+	    result = result + "\n";
+	    counter--;
+	}
+    
+
+    return result; // each time add line, add to new variable
+    // when variable  * 2 - 1 then stop 
+    }
+
+    public String tri4(int h){
+	String result = new String();
+	for (int i=1;i<h+1;i++) {
+	    for (int x=i-1;x>0;x--){
+		result=result+" ";
+	    }
+	    for (int x=0;x<=h-i;x++){
+		result = result + "*";
+	    }
+
+	    result = result + "\n";
+	}
+	return result;
+    }
 
 }
+
