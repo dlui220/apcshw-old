@@ -29,25 +29,37 @@ public class Box {
 	}
 	return end;
     }
-    
+
     public String triangle2(int h) {
-	int x = 0;
-	String end = "";
-	while ( x <= h ) {
-	    int y = 0;
-	    while ( y < h-1) {
-		end = end + " ";
-		y = y + 1;
+	String result = "\n";
+	int newh = h;
+	int x = h - 1;
+	while (x > 0) {
+	    int c = 0;
+	    while (c < x) {
+		int g = h;
+		result = result + " ";
+		c = c + 1;
 	    }
-	    int y = 0;
-	    while (y < x){
-		end = end + "*";
-		y = y + 1;
-	    }
-	    end = end + "\n";
-	    x = x + 1;
+	    x = x - 1;
+	    if (result.substring(h-1) != "*") {
+		while (result.length() % (newh + 1) != 0) {
+		    result = result + "*";
+		}
+	    } else {
+		result = result + "\n" ;
+		}
+	    result = result + "\n";
 	}
-	return end;
+	while (h>0){
+	    h = h - 1;
+	    result = result + "*";
+	}
+	return result;
     }
-    	
+
+
+	
+
+    // if result mod h = 0 ----- add * else new line
 }
