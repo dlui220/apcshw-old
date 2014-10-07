@@ -1,4 +1,4 @@
-/* Basechar is a superclass of Warrior */
+/* Basechar is a superclass of Warrior and Mage */
 public class Basechar {
     private int health=20;
     private int manna=0;
