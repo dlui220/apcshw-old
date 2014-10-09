@@ -10,8 +10,13 @@ public class Basechar {
 	//	System.out.println(this.getName()+" is attacking "+other.getName());
 	System.out.println(this+" is attacking "+other);
     }
+    /* 
     public Basechar(){
-	name = "Derrick";
+      name = "Derrick";
+       }
+    */
+    public Basechar(String n){
+	setName(n);
     }
     public void setName(String name){
 	this.name = name;
@@ -25,4 +30,5 @@ public class Basechar {
     public void setHealth(int i){
 	health = i;
     }
+    
 }
