@@ -2,7 +2,7 @@
 public class Basechar {
     private int health=20;
     private String name;
-
+    private int manna;
     public String toString(){
 	return this.getName();
     }
@@ -10,6 +10,12 @@ public class Basechar {
 	//	System.out.println(this.getName()+" is attacking "+other.getName());
 	System.out.println(this+" is attacking "+other);
     }
+<<<<<<< HEAD
+     public Basechar(){
+	name = "Default";
+	}
+     public void setName(String name){
+=======
     /* 
     public Basechar(){
       name = "Derrick";
@@ -19,8 +25,9 @@ public class Basechar {
 	setName(n);
     }
     public void setName(String name){
+>>>>>>> e72a37daf5793807b2e109318eb0f4b7ed8667bd
 	this.name = name;
-    }
+	}
     public String getName(){
 	return name;
     }
