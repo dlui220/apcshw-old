@@ -1,0 +1,7 @@
+public String nonStart(String a, String b) {
+  String newa = a.substring(1);
+  String newb = b.substring(1);
+  String result = newa + newb;
+  return result;
+}
+
