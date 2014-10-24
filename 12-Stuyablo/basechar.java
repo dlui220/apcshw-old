@@ -14,7 +14,7 @@ public abstract class basechar {
     }
     public void assignDamage(basechar other)
     {
-	int AT = other.getAttackStrength();
+	int AT = this.getAttackStrength();
 	other.lowerHealth(AT);
 
 
@@ -29,7 +29,14 @@ public abstract class basechar {
 	attackStrength = s;
     }
     public void lowerAttackStrength (int l){
-	attackStrength = attackStrength - l;
+	if (attackStrength - l == 0)
+	    {
+		attackStrength = 0;
+	    }
+	else
+	    {
+		attackStrength = attackStrength - l;
+	    }
     }
     public void setDefending (boolean b){
 	defending = b;
