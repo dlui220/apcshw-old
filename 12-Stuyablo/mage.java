@@ -26,5 +26,15 @@ public class mage extends basechar
 		}
 	    this.increaseHealth(this.getMana()/3 + randomNumber.nextInt(20));
     }
+
+   public void run (basechar other)
+    {
+	boolean escape = randomNumber.nextInt(150) < this.getMana();
+	if (escape) 
+	    {
+		System.out.println(this.getName() + " DISAPPEARED in a puff of smoke");
+	    }
+	other.setAttackStrength(0);
+    }
 }
 			   

@@ -16,7 +16,7 @@ public abstract class basechar {
     {
 	int AT = this.getAttackStrength();
 	other.lowerHealth(AT);
-
+	
 
     }
 	    
@@ -84,6 +84,7 @@ public abstract class basechar {
     public String getName(){
 	return name;
     }
+    public abstract void run(basechar Other);
     
     
 

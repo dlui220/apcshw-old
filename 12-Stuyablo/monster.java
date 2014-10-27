@@ -22,15 +22,18 @@ public class monster extends basechar {
     }
    
 	
-    public void evilattack(basechar other) {
-	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
-	//other.setHealth(other.getHealth() - damage);
-	System.out.println(this + "EvilAtacked"+other);
-	//System.out.println(other +"lost"+damage+"damage!!");
+    public void slash(basechar other) {
+	this.setAttackStrength(this.getSpeed()/12 + r.nextInt(20)); 
+	System.out.println(this.getName() + " SLASHES " +other);
 	other.setDefending(true);
     } 
+    public void stab(basechar other) {
+	this.setAttackStrength(this.getSpeed()/24 + this.getStrength()/24 + r.nextInt(20));
+	System.out.println(this.getName() + " STABS " + other.getName());
+	other.setDefending(true);
+    }
     public void darkmagic(basechar other) {
-	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
+	this.setAttackStrength(this.getMana()/13 + r.nextInt(20));
 	//this.setManna(this.getManna() / 2);
 	//other.setHealth(other.getHealth() - damage);
 	System.out.println(this + "used DARKMAGIC on"+other);
@@ -77,6 +80,10 @@ public class monster extends basechar {
 		    System.out.println(this.getName() + " was killed while HEALING");
 		}
 	    this.increaseHealth(this.getMana()/10 + r.nextInt(10));
+    }
+    public void run(basechar other)
+    {
+	System.out.println(this.getName() + " fled");
     }
 	
 }

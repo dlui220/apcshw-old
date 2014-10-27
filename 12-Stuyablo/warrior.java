@@ -37,4 +37,17 @@ public class warrior extends basechar
 	other.assignDamage(this);
 	
     }
+    public void run (basechar other)
+    {
+	boolean escape = randomNumber.nextInt(150) < this.getStrength();
+	if (escape) 
+	    {
+		System.out.println(this.getName() + " knocked over " + other.getName() + " and fled successfully");
+	    }
+	else
+	    {
+		System.out.println("RUN failed...");
+	    }
+	other.setAttackStrength(0);
+    }
 }
