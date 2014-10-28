@@ -32,14 +32,12 @@ public class Arraystuff {
 	int result = 0;
 	boolean found = false;
 	for (int i=0;i<a.length;i++){
-	    if (!found){
-		if (a[i] == n) {
-		    result = i + 1;
-		    found = true;
-		} else { 
-		    result = -1;
-		}	    
-	    }
+	    if (a[i] == n) {
+		result = i + 1;
+		break;
+	    } else { 
+		result = -1;
+	    }	    
 	}
 	return result;
 	
@@ -55,11 +53,21 @@ public class Arraystuff {
 	return result;
     }
 
+    public int freq(int n){
+	int result = 0;
+	for (int i=1;i<a.length;i++) {
+	    if (a[i] == n) {
+		result++;
+		}
+	}
+	return result;
+    }
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
 	System.out.println(as);
 	System.out.println(as.find(100));
 	System.out.println(as.maxVal());
+	System.out.println(as.freq(100));
 	
     }
 
