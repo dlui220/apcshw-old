@@ -62,6 +62,46 @@ public class Arraystuff {
 	}
 	return result;
     }
+
+    public int sum67(int[] nums) {
+	int result = 0;
+	boolean count = true;
+	if (nums.length == 0) {
+	    result = 0;
+	}
+	for (int i=0;i<nums.length;i++){
+	    if (nums[i] == 6) {
+		count = false;
+	    }
+	    if (count) {
+		result = result + nums[i];
+	    }
+	    if (nums[i] == 7) {
+		count = true;
+	    }
+ 
+	}
+	return result;
+    }
+    /*
+    public int freq(int[] nums, int n){
+	int result = 0;
+	for (int i=1;i<nums.length;i++) {
+	    if (nums[i] == n) {
+		result++;
+	    }
+	}
+	return result;
+    }
+
+    public boolean more14(int[] nums) {
+	boolean ans = false;
+	if (freq(nums, 1) > freq(nums, 4)){
+	    ans = true;
+	}
+	return ans;
+    }
+    */
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
 	System.out.println(as);
