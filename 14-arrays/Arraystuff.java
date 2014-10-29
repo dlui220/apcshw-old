@@ -83,25 +83,26 @@ public class Arraystuff {
 	}
 	return result;
     }
-    /*
-    public int freq(int[] nums, int n){
-	int result = 0;
-	for (int i=1;i<nums.length;i++) {
-	    if (nums[i] == n) {
-		result++;
+ 
+    public boolean more14(int[] nums) {
+	int count1 = 0;
+	int count4 = 0;
+	for (int i=1;i<nums.length;i++){
+	    if (nums[i] == 1) {
+		count1++;
+	    }
+	    if (nums[i] == 4) {
+		count4++;
 	    }
 	}
-	return result;
+	if (count1 > count4) {
+	    return true;
+	} else {
+	    return false;
+	}
     }
 
-    public boolean more14(int[] nums) {
-	boolean ans = false;
-	if (freq(nums, 1) > freq(nums, 4)){
-	    ans = true;
-	}
-	return ans;
-    }
-    */
+
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
 	System.out.println(as);
