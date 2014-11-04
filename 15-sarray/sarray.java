@@ -1,6 +1,6 @@
 
 public class sarray {
-    // Sarah and I worked on the majority in class.
+    // Sarah and I worked on the majority in class. 
     private int[] data; // should be object
     private int last; // keeps track of last number added
     
