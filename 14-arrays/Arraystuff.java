@@ -12,7 +12,7 @@ public class Arraystuff {
 	rnd = new Random();
 	a = new int[n];
 	for (int i=0;i<a.length;i++){
-	    a[i] = 75+rnd.nextInt(76);
+	    a[i] = rnd.nextInt(20);
 	}
     }
     
@@ -168,14 +168,29 @@ public class Arraystuff {
 	return ans;
     }
 
+    public int mode(){
+	int counter = freq(a[0]);
+	int result = a[0];
+	for (int i=1;i<a.length;i++){
+	    if (freq(a[i]) > counter){
+		result = a[i];
+		counter = freq(a[i]);
+	    }
+	}
+	return result;
+    }
+	    
 
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
+
 	System.out.println(as);
+	/*
 	System.out.println(as.find(100));
 	System.out.println(as.maxVal());
 	System.out.println(as.freq(100));
-	
+	*/
+	System.out.println(as.mode());
     }
 
 
