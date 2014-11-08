@@ -108,7 +108,7 @@ public class sarray {
     /* -------- MAIN --------- */
     public static void main(String[] args) {
 	sarray s = new sarray();
-	/*
+	/*	
 	System.out.println(s.toString());
 	System.out.println(s.size());
 	s.add(5);
@@ -120,9 +120,10 @@ public class sarray {
 	s.add(6);
 	s.add(2, 4);
 	s.remove(0);
+	*/
 	System.out.println(s.toString());
 	System.out.println(s.size());
-	*/
+	
 	
     }
 
