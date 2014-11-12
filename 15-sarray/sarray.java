@@ -116,7 +116,7 @@ public class sarray {
 	System.out.println(s.size());
 
 	} catch (ArrayIndexOutOfBoundsException e) {
-	    System.out.println("You received en error: "+e);
+	    System.out.println("An error has occured: "+e);
 	}
     
 	
