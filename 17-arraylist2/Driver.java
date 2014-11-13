@@ -17,7 +17,7 @@ public class Driver {
 	*/
 	while (al.size() > 0){
 	    for (int x=0;x<al.size();x++) {
-		j = r.nextInt(al.size());
+		int j = r.nextInt(al.size());
 		if (!result.contains(al.get(j))){
 		    result.add(al.get(j));
 		    al.remove(al.get(j));
