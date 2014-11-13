@@ -21,9 +21,11 @@ public class Driver {
 		if (!result.contains(al[j])){
 		    result.add(al[j]);
 		    al.remove(al[j]);
-		    
+		}	    
 		    
 	    
 	    }
 	}
+	    
     }
+}
