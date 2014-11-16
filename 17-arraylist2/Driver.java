@@ -7,6 +7,7 @@ public class Driver {
 	Random r = new Random();
 
 	// Using ArrayLists // 
+	// Completed in class with Jeanne during pair-programming //
 	ArrayList<Integer> al = new ArrayList();
 	ArrayList<Integer> result = new ArrayList();
 	for (int i=0;i<10;i++) {
