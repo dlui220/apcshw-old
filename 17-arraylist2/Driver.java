@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Driver {
+public class Driver2 {
 
     public static void main(String[] args) {
 	Random r = new Random();
