@@ -4,9 +4,11 @@ public class WordSearch {
 
     public WordSearch(int r, int c){
 	board=new char[r][c];
+	for (int i=0;i<board.length;i++) {
+	    for (int j=0
     }
     public WordSearch(){
-	WordSearch(30,20);
+	this(30,20);
     }
 
     public String toString(){
