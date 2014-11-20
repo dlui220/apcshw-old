@@ -33,6 +33,9 @@ public class WordSearch{
 	for (int i=0;i<word.length();i++) {
 	    board[r][c] = word.charAt(i);
 	    c++;
+	    if(c>board[r].length) {
+		break;
+	    }
 	}
 	    
     }
@@ -42,6 +45,9 @@ public class WordSearch{
 	for (int i=word.length()-1;i>=0;i--){
 	    board[r][c] = word.charAt(i);
 	    c++;
+	    if(c<0) {
+		break;
+	    }
 	}
     }
     public void addWordV(String word, int row, int col){
@@ -50,6 +56,9 @@ public class WordSearch{
 	for (int i=0;i<word.length();i++){
 	    board[r][c] = word.charAt(i);
 	    r++;
+	    if(r> board.length) {
+		break;
+	    }
 	}
     }
     public void addWordVBackward(String word, int row, int col){
@@ -58,15 +67,49 @@ public class WordSearch{
 	for (int i=word.length()-1;i>=0;i--){
 	    board[r][c] = word.charAt(i);
 	    r++;
+	    if(r<0) {
+		break;
+	    }
 	}
     }
-    public void addDUpL(String word, int row, int col){
+    public void addDUpR(String s, int row, int col) {
 	int r = row, c = col;
 	
-	for (int i=0;i<word.length();i++){
-	    board[r][c] = word.charAt(i);
+	for(int i=0; i<s.length();i++) {
+	    board[r][c] = s.charAt(i);
+	    r++;
+	    c++;
+	    if(c > board[row].length || r > board.length) {break;}
+	}
+    }
+
+    public void addDUpL(String s, int row, int col) {
+	int r = row, c = col;
+	
+	for(int i=0; i<s.length();i++) {
+	    board[r][c] = s.charAt(i);
+	    r++;
+	    c--;
+	}
+    }
+
+    public void addDDownR(String s, int row, int col) {
+	int r = row, c = col;
+	
+	for(int i=0; i<s.length();i++) {
+	    board[r][c] = s.charAt(i);
 	    r--;
 	    c++;
+	}
+    }
+
+    public void addDDownL(String s, int row, int col) {
+	int r = row, c = col;
+	
+	for(int i=0; i<s.length();i++) {
+	    board[r][c] = s.charAt(i);
+	    r--;
+	    c--;
 	}
     }
     public static void main(String[] args) {
