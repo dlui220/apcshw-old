@@ -29,7 +29,7 @@ public class WordSearch{
 	}
 	return s;
     }
-
+    /*
     public void addWordH(String word,int row,int col){
 	int r = row, c = col;
 	if(!(c+word.length()>board[0].length)) {
@@ -71,7 +71,7 @@ public class WordSearch{
     public void addDUpR(String s, int row, int col) {
 	int r = row, c = col;
 	
-	if(r+s.length() <= board.length && c+s.length() <=board[r].length) {
+	if(r+s.length() < board.length && c+s.length() <board[r].length) {
 	    for(int i=0; i<s.length();i++) {
 		board[r][c] = s.charAt(i);
 		r++;
@@ -83,7 +83,7 @@ public class WordSearch{
     public void addDUpL(String s, int row, int col) {
 	int r = row, c = col;
 
-	if(r+s.length() <= board.length && c-s.length() >= 0) {
+	if(r+s.length() < board.length && c-s.length() > 0) {
 	    for(int i=0; i<s.length();i++) {
 		board[r][c] = s.charAt(i);
 		r++;
@@ -94,7 +94,7 @@ public class WordSearch{
     public void addDDownR(String s, int row, int col) {
 	int r = row, c = col;
 	
-	if(r-s.length() >=0 && c+s.length() <= board[r].length) {
+	if(r-s.length() >0 && c+s.length() < board[r].length) {
 	    for(int i=0; i<s.length();i++) {
 		board[r][c] = s.charAt(i);
 		r--;
@@ -106,7 +106,7 @@ public class WordSearch{
     public void addDDownL(String s, int row, int col) {
 	int r = row, c = col;
 
-	if(r-s.length() >= 0 && c-s.length() >= 0) {
+	if(r-s.length() > 0 && c-s.length() > 0) {
 	    for(int i=0; i<s.length();i++) {
 		board[r][c] = s.charAt(i);
 		r--;
@@ -114,14 +114,49 @@ public class WordSearch{
 	    }
 	}
     }
+    */
+    
+    // used Mr. Z's compressed code lol
+    
+    public boolean addWordHelper(String w,int row, int col,int deltaRow, int deltaCol){
+	int r = row, c = col;
+				
+	for (int i=0;i<w.length();i++){
+	    try {
+		if (board[r][c]!='.' && board[r][c]!=w.charAt(i)){
+		    return false;
+		}
+	    } catch ( Exception e){
+		return false;
+	    }
+	    r = r + deltaRow;
+	    c = c + deltaCol;
+	}
 
-    public boolean addWord(String W){
+	r = row;
+	c = col;
+
+	for (int i=0;i<w.length();i++){
+	    board[r][c] = w.charAt(i);
+	    r = r + deltaRow;
+	    c=c+deltaCol;
+	}
+	return true;
+    }
+
+    
+    public boolean addWord(String w){
 	Random r = new Random();
-	char[][] testboard = board;
 	int randomc = r.nextInt(board[0].length);
 	int randomr = r.nextInt(board.length);
-	int x = r.nextInt(8);
-
+	int deltaRow = -1 + r.nextInt(3);
+	int deltaCol = -1 + r.nextInt(3);
+	if (deltaRow == deltaCol && deltaCol == 0) {
+	    return false;
+	}
+	w = w.toUpperCase();
+	return addWordHelper(w,randomr,randomc,deltaRow,deltaCol);
+	    /*
 	if (x == 0){
 	    addWordH(W,randomr,randomc);
 	} else if (x == 1) {
@@ -144,13 +179,21 @@ public class WordSearch{
 	}else{
 	    return true;
 	}
+	    */
     }
-       
 
+    public void fill(){
+	for (int i=0;i<board.length;i++){
+	    for (int x=0;x<board[0].length;x++){
+		if 
+	    
+    }
+	    // Character.toString((char) i);
+	    
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	try {
-	    for (int i=0;i<100;i++) {
+	    for (int i=0;i<10;i++) {
 		w.addWord("Wow");
 	    }
 	    System.out.println(w);
