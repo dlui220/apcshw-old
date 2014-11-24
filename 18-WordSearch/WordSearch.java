@@ -185,7 +185,8 @@ public class WordSearch{
     public void fill(){
 	for (int i=0;i<board.length;i++){
 	    for (int x=0;x<board[0].length;x++){
-		if 
+		if (board[i][x] == "."){
+		    
 	    
     }
 	    // Character.toString((char) i);
