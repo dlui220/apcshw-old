@@ -183,6 +183,7 @@ public class WordSearch{
     }
 
     public void fill(){
+	String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	for (int i=0;i<board.length;i++){
 	    for (int x=0;x<board[0].length;x++){
 		if (board[i][x] == "."){
