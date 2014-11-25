@@ -1,1 +1,1 @@
-I'm currently up to the part to add random characters to every empty space.
+I updated the code to work with a text file, and fill up the board.

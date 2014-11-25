@@ -183,24 +183,37 @@ public class WordSearch{
     }
 
     public void fill(){
-	String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char[] letters = new char[]{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 	Random r = new Random();
 	int randomAlpha = r.nextInt(26);
 	for (int i=0;i<board.length;i++){
 	    for (int x=0;x<board[0].length;x++){
-		if (board[i][x] == "."){
-		    board[i][x] = 
-		    
-	    
+		if (board[i][x] == '.'){
+		    board[i][x] = letters[r.nextInt(26)];
+		}
+	    }
+	}
     }
+
+    
 	    // Character.toString((char) i);
 	    
     public static void main(String[] args) {
-	WordSearch w = new WordSearch();
+	Scanner sc = null;
+	WordSearch w = new WordSearch(10,20);
 	try {
-	    for (int i=0;i<10;i++) {
-		w.addWord("Wow");
-	    }
+	    sc = new Scanner(new File("wordbank.txt"));
+	} catch (Exception s) {
+	    System.out.println("the file cannot be read.");
+	    System.exit(0);
+	}
+	while (sc.hasNext()){
+	    String s = sc.next();
+	    w.addWord(s);
+	}
+	try {
+	    System.out.println(w);
+	    w.fill();
 	    System.out.println(w);
 	} catch (Exception e) {
 	    System.out.println(e);
