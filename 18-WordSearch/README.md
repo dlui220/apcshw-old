@@ -1,1 +1,1 @@
-I updated the code to work with a text file, and fill up the board.
+I updated the code to work with a text file and fill up the board.
