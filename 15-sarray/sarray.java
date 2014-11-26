@@ -1,21 +1,21 @@
 
 public class sarray {
     // Sarah and I worked on the majority in class. 
-    private int[] data; // should be object
+    private String[] data; // should be object
     private int last; // keeps track of last number added
     
     /* ------ Constructor ------ */
     public sarray() {
-	data = new int[10];
+	data = new String[10];
     }
     
     public sarray(int i) {
 	// start array at 10
-	data = new int[i];
+	data = new String[i];
     }
 
     /* ------ Methods ------ */
-    public void findLast() {
+    /*  public void findLast() {
 	int sum;
 	int index;
 	for(int i=0;i<data.length;i++) {
@@ -32,7 +32,17 @@ public class sarray {
 	    }
 	}
     }
+    */
 
+    public void findLast() {
+	int pos = 0;
+	for(int i=data.length;i>0;i--) {
+	    if (!(data[i].isEmpty())) {
+		pos = i;
+	    }
+	}
+	last = pos;
+    }
     public String toString() {
 	String s = "";
 	for(int i=0;i<data.length;i++) {
@@ -54,14 +64,13 @@ public class sarray {
 	return storage;
     }
 
-    public boolean add(int i) {
-	findLast();
+    public boolean add(String i) {
 	if(last == 0) {
 	    data[0] = i;
 	}
         else if(data.length <= last) {
 	    int[] storage = shift(0, last);
-	    data = new int[data.length + 1];
+	    data = new String[data.length + 1];
 	    for(int x=0;x<storage.length;x++){
 		data[x] = storage[x];
 	    }
@@ -94,7 +103,7 @@ public class sarray {
     public int size() {
         int size = 0;
 	for(int i=0; i<data.length; i++) {
-	    if(data[i] != 0) {
+	    if (!(data[i].isEmpty())) {
 		size += 1;
 	    }
 	}
