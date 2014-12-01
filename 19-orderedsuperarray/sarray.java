@@ -7,11 +7,17 @@ public class sarray {
     /* ------ Constructor ------ */
     public sarray() {
 	data = new String[10];
+	for (int i=0;i<10;i++) {
+	    data[i] = "";
+	}
     }
     
     public sarray(int i) {
 	// start array at 10
 	data = new String[i];
+	for (int x=0;x<i;x++) {
+	    data[x] = "";
+	}
     }
 
     /* ------ Methods ------ */
@@ -114,25 +120,6 @@ public class sarray {
 	data[index] = "";
     }
 
-    /* -------- MAIN --------- */
-    public static void main(String[] args) {
-	try{
-	    sarray s = new sarray();
-	    
-	    System.out.println(s.toString());
-	    System.out.println(s.size());
-	    s.add(10,5);
-	    System.out.println(s.toString());
-	    System.out.println(s.size());
-	    
-	} catch (ArrayIndexOutOfBoundsException e) {
-	    System.out.println("An error has occured: "+e);
-	}
-    
-
-	
-	
-	    }
 
     
 }
