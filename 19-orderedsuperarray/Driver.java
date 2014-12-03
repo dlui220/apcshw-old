@@ -1,7 +1,7 @@
 public class Driver{
     public static void main(String[] args) {
 	try{
-	    sarray s = new sarray();
+	    // Ordered sarray after this poibnt
 	    orderedSarray x = new orderedSarray();
 	    System.out.println(x.toString());
 	    System.out.println(x.size());
@@ -14,6 +14,7 @@ public class Driver{
 
 
 	    // Regular Sarray after this point
+	    sarray s = new sarray();
 	    System.out.println();
 	    System.out.println("Regular Sarray: ");
 	    System.out.println(s.toString());
