@@ -20,6 +20,9 @@ public class sarray {
 	}
     }
 
+    public String[] getData(){
+	return data;
+    }
     /* ------ Methods ------ */
     /*  public void findLast() {
 	int sum;
