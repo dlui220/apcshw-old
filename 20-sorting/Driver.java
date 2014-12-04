@@ -1,7 +1,7 @@
 public class Driver{
     public static void main(String[] args) {
 	try{
-	    // Ordered sarray after this poibnt
+	    /* Ordered sarray after this poibnt
 	    orderedSarray x = new orderedSarray();
 	    System.out.println(x.toString());
 	    System.out.println(x.size());
@@ -9,6 +9,7 @@ public class Driver{
 	    x.add("jeanne");
 	    x.add("alex");
 	    System.out.println(x.toString());
+	    */
 
 
 
@@ -23,8 +24,11 @@ public class Driver{
 		s.add(i,"JEANNEEEE");
 	    }
 	    s.set(5,"DERRICK");
+	    s.set(8,"ZAMANSKY");
 	    System.out.println(s.toString());
 	    System.out.println(s.size());
+	    s.isort();
+	    System.out.println(s.toString());
 	    
 	} catch (ArrayIndexOutOfBoundsException e) {
 	    System.out.println("An error has occured: "+e);
