@@ -133,4 +133,35 @@ public class sarray {
 	    data[j+1] = temp;
 	}
     }
+    public void ssortDescending(){
+	for (int i=0;i<data.length;i++){
+	    String temp = "";
+	    int index;
+	    for (int j=0;j<data.length;j++){
+		if (data[j].compareTo(data[i]) < 0){
+		    index = j;
+		    temp = data[i];
+		    data[i] = data[index];
+		    data[index] = temp;
+		}
+	    }
+
+	}
+    }
+    
+    public void ssortAscending(){
+	for (int i=0;i<data.length;i++){
+	    String temp = "";
+	    int index;
+	    for (int j=0;j<data.length;j++){
+		if (data[j].compareTo(data[i]) > 0){
+		    index = j;
+		    temp = data[i];
+		    data[i] = data[index];
+		    data[index] = temp;
+		}
+	    }
+
+	}
+    }
 }
