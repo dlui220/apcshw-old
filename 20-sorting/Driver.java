@@ -29,7 +29,6 @@ public class Driver{
 	    s.set(7,"APPLE");
 	    s.set(9,"EUREKA");
 	    System.out.println(s.toString());
-	    System.out.println(s.size());
 	    s.ssortAscending();
 	    System.out.println(s.toString());
 	    s.ssortDescending();

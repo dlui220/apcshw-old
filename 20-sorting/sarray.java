@@ -136,13 +136,11 @@ public class sarray {
     public void ssortDescending(){
 	for (int i=0;i<data.length;i++){
 	    String temp = "";
-	    int index;
 	    for (int j=0;j<data.length;j++){
 		if (data[j].compareTo(data[i]) < 0){
-		    index = j;
 		    temp = data[i];
-		    data[i] = data[index];
-		    data[index] = temp;
+		    data[i] = data[j];
+		    data[j] = temp;
 		}
 	    }
 
