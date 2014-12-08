@@ -1,8 +1,14 @@
+import java.util.*;
+import java.io.*;
 
 public class sarray {
     // Sarah and I worked on the majority in class. 
     private String[] data; // should be object
     private int last; // keeps track of last number added
+
+    public int bubcount = 0;
+    public int inscount = 0;
+    public int selcount = 0;
     
     /* ------ Constructor ------ */
     public sarray() {
@@ -129,6 +135,7 @@ public class sarray {
 	    int j;
 	    for (j=i-1;j>-1 && data[j].compareTo(temp) > 0;j--) {
 		data[j+1] = data[j];
+		inscount++;
 	    }
 	    data[j+1] = temp;
 	}
@@ -141,6 +148,7 @@ public class sarray {
 		    temp = data[i];
 		    data[i] = data[j];
 		    data[j] = temp;
+		    selcount++;
 		}
 	    }
 
@@ -157,6 +165,7 @@ public class sarray {
 		    temp = data[i];
 		    data[i] = data[index];
 		    data[index] = temp;
+		    selcount++;
 		}
 	    }
 
@@ -173,9 +182,14 @@ public class sarray {
 		    holder = data[j];
 		    data[j] = data[j+1];
 		    data[j+1] = holder;
+		    bubcount++;
 		}
 	    }
 	}
 		    
+    }
+
+    public void builtin(){
+	Arrays.sort(data);
     }
 }
