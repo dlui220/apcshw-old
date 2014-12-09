@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+public class interval{
+    private int low,high;
+    Random r = new Random();
+ /* public interval(){
+	boolean high = false;
+	Random rand = new Random();
+	data[0]=rand.nextInt(100)-50;
+	while(!high){
+	    int x = rand.nextInt(100)-49;
+	    if (x>data[0]){
+		high = true;
+		data[1] = x;
+	    }
+	}
+    }
+ */
+    public interval(){
+	int l = r.nextInt(100);
+	int h = l + 1 + r.nextInt(100);
+	low = l;
+	high = h;
+    }
+    
+    public interval(int l, int h){
+	low = l;
+	high = h;
+    }
+    
+
+    public String toString(){
+	return "[" + low +", "+ high +"]";
+    }
+
+    public static void printstuff() {
+	System.out.println("Stuff");
+    }
+}

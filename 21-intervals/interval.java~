@@ -1,0 +1,28 @@
+import java.util.Random;
+public class interval{
+    int[] data = new int[2];
+    public interval(){
+	boolean high = false;
+	Random rand = new Random();
+	data[0]=rand.nextInt(100)-50;
+	while(!high){
+	    int x = rand.nextInt(100)-49;
+	    if (x>data[0]){
+		high = true;
+		data[1] = x;
+	    }
+	}
+    }
+    
+    public interval(int lowval, int highval){
+	if (lowval < highval){
+	    data[0]=low;
+	    data[1]=high;   
+	}
+    }
+
+    public String toString(){
+	return "[" + data[0]+", "+ data[1]+"]";
+	    
+    }
+}
