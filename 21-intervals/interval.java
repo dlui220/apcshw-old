@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 public class interval{
     private int low,high;
-    Random r = new Random();
+    private static Random r = new Random();
  /* public interval(){
 	boolean high = false;
 	Random rand = new Random();
@@ -37,7 +37,8 @@ public class interval{
 	System.out.println("Stuff");
     }
 
-    public int compareTo(interval other){
+    /*   
+     public int compareTo(interval other){
 	int result = 0;
 	if (this.low > other.low){ 
 	    result = result + 1;
@@ -49,5 +50,16 @@ public class interval{
 	    result = result - 1;
 	}
 	return result;
+    }
+    */
+
+    public int compareTo(Object other){
+	
+	interval o = (interval)other;
+	if (this.low == o.low) {
+	    return this.high - o.high;
+	} else {
+	    return this.low - o.low;
+	}
     }
 }
