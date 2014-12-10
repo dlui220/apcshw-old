@@ -36,4 +36,18 @@ public class interval{
     public static void printstuff() {
 	System.out.println("Stuff");
     }
+
+    public int compareTo(interval other){
+	int result = 0;
+	if (this.low > other.low){ 
+	    result = result + 1;
+	} else if (this.low < other.low){
+	    result = result - 1;
+	} else if (this.high > other.high){
+	    result = result + 1;
+	} else if (this.high < other.high){
+	    result = result - 1;
+	}
+	return result;
+    }
 }
