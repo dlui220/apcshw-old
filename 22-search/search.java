@@ -100,6 +100,27 @@ public class search {
 	return null;
     }
 
+    public Comparable rbsearch(Comparable c, int low, int high) {
+	int mid = (low + high) / 2;
+	if (low <= high) {
+	    if (ca[mid].equals(c)) {
+		return c;
+	    } else {
+		if (c.compareTo(ca[mid]) > 0) {
+		    return rbsearch(c, mid + 1, high);
+		} else {
+		    return rbsearch(c, low, mid - 1);
+		}
+	    }
+	} else {
+	    return null;
+	}
+    }
+
+    public Comparable rbsearch(Comparable c) {
+	return rbsearch(c, 0, ca.length - 1);
+    }
+
     public static void main(String[] args) {
 	search s = new search(1000000);
 	Random rnd = new Random(6767); 
@@ -108,7 +129,6 @@ public class search {
 	}
 	s.sort();
 	System.out.println(s.bsearch(9));
-
     }
 }
 
