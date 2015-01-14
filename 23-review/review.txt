@@ -1,0 +1,41 @@
+Reviewing Kathryn and Lian's Code
+=================================
+
+https://github.com/kaytrean/Project
+
+Dating Simulator Game
+
+=================================
+
+Comments:
+1. There were initially problems with your code in the "PROCESSING" pane
+   but now I see that you guys moved to GUI, which might be easier to
+   integrate with the other java files, just in my opinion.
+
+basechar.java
+- seems pretty straightforward
+
+boys.java
+- also seems pretty straightforward, just an extension of the basechar that
+  will inherit basechar's traits
+
+gym.java/prep.java
+- implemented the reaction methods based on the approval and time parameters,
+  seems okay
+
+guilove.java
+- maybe add some comments to show what each part of the code creates in the
+  GUI, otherwise it's somewhat confusing to look at just the code
+- from what I can tell the buttons change the setting of the game to the
+  different files that extended boys.java (like gym, prep, etc)
+- GUI is okay with buttons and stuff
+
+map.pde
+- I can't even begin because I don't know how to program in this
+
+Code seems fine, although not quite put together yet.
+
+
+
+
+
