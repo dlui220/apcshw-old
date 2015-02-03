@@ -1,4 +1,4 @@
 apcshw
 ======
 
-AP Computer Science Homework 
+AP Computer Science Homework - Term 1
